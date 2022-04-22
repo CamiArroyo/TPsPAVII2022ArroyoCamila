@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP01 - Ejercicio 4</title>
+</head>
+<body>
+    <p><a href="tp01.html">Volver atrás</a></p>
+    <h1>Formulario</h1>
+
+    <form name="formulario" id="formulario" method="post" action="https://jkorpela.fi/cgi-bin/echo.cgi">
+        <div style="padding: 10px">
+            <label for="nombre"><b>Nombre de usuario:</b></label>
+            <input type="text" name="nombre" id="nombre" placeholder="Ingrese nombre"/>
+        </div>
+        <div style="padding: 10px">
+            <label for="clave"><b>Clave:</b></label>
+            <input type="password" name="clave" id="clave" placeholder="Ingrese su clave"/>
+        </div>
+        <div style="padding: 10px">
+            <label for="carrera"><b>Carrera que estudió:</b></label>
+            <input type="radio" name="carrera" id="carrera" value="ISI" checked/>Ingeniería en Sistemas
+            <input type="radio" name="carrera" id="carrera" value="LICINF"/>Licenciatura en Informática
+            <input type="radio" name="carrera" id="carrera" value="TECPROG"/>Tecnicatura en Programación
+        </div>
+        <div style="padding: 10px">
+            <b>Tecnologías que maneja:</b>
+            <label for="javascript">Javascript: </label>
+            <input type="checkbox" name="javascript" id="javascript" value="1" />
+            <label for="python">Python: </label>
+            <input type="checkbox" name="python" id="python" value="2" />
+            <label for="c#">C#: </label>
+            <input type="checkbox" name="c#" id="c#" value="3" />
+            <label for="c++">C++: </label>
+            <input type="checkbox" name="c++" id="c++" value="4" />
+        </div>
+        <div style="padding: 10px">
+            <label for="observaciones"><b>Observaciones que desee hacer:</b></label>
+            <br />
+            <textarea name="observaciones" id="observaciones" cols="50" rows="5"></textarea>
+        </div>
+        <div style="padding: 10px">
+            <label for="informacion"><b>¿Cómo desea recibir información?</b></label>
+            <select name="informacion" id="informacion">
+            <option value="1">Mail</option>
+            <option value="2">Llamada telefónica</option>
+            <option value="3">WhatsApp</option>
+            <option value="4">LinkedIn</option>
+            </select>
+        </div>
+        <div style="padding: 10px">
+            <input type="submit" name="boton1" id="boton1" value="Enviar formulario sin confirmación"/>
+            <input type="button" name="boton2" id="boton2" value="Enviar formulario con confirmación" onclick="confirm('¿Desea enviar los datos?')?submit():''"/>
+            <input type="reset" name="boton3" id="boton3" value="Vaciar formulario"/>
+        </div>
+    </form>
+</body>
+</html>
